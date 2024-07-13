@@ -16,8 +16,8 @@ services:
     ports:
       - "3000:3000"
     environment:
-    # не работает пока что
-      - NEXT_PUBLIC_BACKEND_HOST=http://host.docker.internal:8000
+      - NEXT_PUBLIC_BACKEND_HOST=http://localhost:8000
+      - NEXT_PUBLIC_BACKEND_HOST_FOR_DOCKER=http://back:8000
     depends_on:
       - back
 
