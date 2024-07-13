@@ -14,7 +14,7 @@ Instead of this, you could run backend and frontend in two independent docker co
 
 ```
   docker build -t style-transfer-back ./style-transfer-back && docker run -it style-transfer-back
-  docker build -t style-transfer-frontend ./style-transfer-frontend && docker run -it style-transfer-frontend
+  docker build -t style-transfer-front ./style-transfer-front && docker run -it style-transfer-front
 ```
 
 but its better to take a look on the working app:)
