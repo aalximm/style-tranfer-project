@@ -1,0 +1,6 @@
+[submodule "style-transfer-back"]
+	path = style-transfer-back
+	url = https://github.com/aalximm/style-transfer-back.git
+[submodule "style-transfer-front"]
+	path = style-transfer-front
+	url = https://github.com/aalximm/style-transfer-front.git

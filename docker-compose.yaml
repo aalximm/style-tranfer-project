@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  back:
+    build: ./style-transfer-back
+    ports:
+      - "8000:8000"
+    environment:
+      - CELERY_BROKER_URL=redis://redis:6379
+      - CELERY_BACKEND_URL=redis://redis:6379
+    depends_on:
+      - redis
+    
+  front:
+    build: ./style-transfer-front
+    ports:
+      - "3000:3000"
+    environment:
+    # не работает пока что
+      - NEXT_PUBLIC_BACKEND_HOST=http://host.docker.internal:8000
+    depends_on:
+      - back
+
+  redis:
+    image: redis:latest
+    ports:
+      - "6379:6379"
