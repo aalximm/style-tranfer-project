@@ -1,21 +1,21 @@
 # Style Transfer application
 
-### simple description
-
-There are 3 parts:
+There are 3 parts in this project:
  - training the model
  - backend inference
- - web app aka ui
+ - web app aka UI
 
-### docker-compose
-Unfortunatly, there are few issues with running all application in the docker-compose.
+## Training
 
-Instead of this, you could run backend and frontend in two independent docker containers
+There is an notebook with training workflow
+
+## Usage
 
 ```
-  docker build -t style-transfer-back ./style-transfer-back && docker run -it style-transfer-back
-  docker build -t style-transfer-front ./style-transfer-front && docker run -it style-transfer-front
+docker-compose up --build
 ```
+
+frontend runs on 3000 port
 
 but its better to take a look on the working app:)
 https://perfect-style-transfer.netlify.app
